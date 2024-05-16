@@ -74,8 +74,6 @@ def generate(template_name):
     if template_name not in templates:
         return jsonify({"error": "Template not found"}), 404
 
-    # Safely extract prompt from JSON body with error handling
-    #prompt = request.json.get('prompt') + ".Please, respond in Russian"
     prompt = request.json.get('prompt')
     if not prompt:
         return jsonify({"error": "No prompt provided"}), 400
@@ -89,10 +87,20 @@ def generate(template_name):
             chain_type_kwargs={"prompt": template}
         )
         result = qa_chain.invoke({"query": prompt})
-        # translate
-        translated = GoogleTranslator(source='en', target='ru').translate(result["result"])
-        #print(translated)
-        #return jsonify(result["result"])
+        
+        # Extract source documents and result
+        source_documents = result["source_documents"]
+        llm_response = result["result"]
+        
+        # Create a new document containing the LLM's response
+        new_document = Document(page_content=llm_response, metadata={"source": "llm"})
+        
+        # Add the new document to the corresponding Qdrant database
+        qdrants[template_name].add_documents([new_document])
+        
+        # Translate the response
+        translated = GoogleTranslator(source='en', target='ru').translate(llm_response)
+        
         return jsonify(translated)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
