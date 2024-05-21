@@ -17,7 +17,7 @@ from langchain.chains import LLMChain
 
 
 import os
-os.environ["OPENAI_API_KEY"] = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+os.environ["OPENAI_API_KEY"] = "sk-чччччччччччччччччччччччччччч"
 
 
 # Directory for templates
@@ -55,25 +55,43 @@ def define_model():
     conversation = LLMChain(llm=llm, prompt=prompt, verbose=False, memory=memory)
     return(conversation)
 
-def extract_and_format_description(text):
-    pattern = re.compile(r'\*\*Starting Location:\*\*([\s\S]*?)\*\*Possible Actions:\*\*')
-    match = pattern.search(text)
-    if match:
-        description = match.group(1).strip()
-        # Split the description into the location name and the rest of the description
-        lines = description.split('\n', 1)
-        if len(lines) > 1:
-            location_name = lines[0].replace('**', '').strip()
-            description_text = lines[1].strip()
-            formatted_output = f"{location_name}:{description_text}"
-        else:
-            # Handle case where there's no description text, just the location name
-            location_name = lines[0].replace('**', '').strip()
-            formatted_output = f"{location_name}:"
-        return formatted_output
-    else:
-        return None
 
+def extract_and_format_description(text):
+    start_patterns = [
+        r'\*\*Starting Location:.*?\*\*([\s\S]*?)(\*\*Possible Actions:|\Z)',
+        r'\*\*Setting:.*?\*\*([\s\S]*?)(\*\*Possible Actions:|\Z)',
+        r'### Starting Location:.*?\n([\s\S]*?)(### Possible Actions:|\*\*Possible Actions:|\*\*Actions:|---\s*\*\*Actions:\*\*|\*\*Actions)',
+        r'([\s\S]*?)(### Possible Actions:|---\s*\*\*Actions:\*\*|\*\*Actions|\*\*Possible Actions)'
+    ]
+    
+    for pattern_str in start_patterns:
+        pattern = re.compile(pattern_str)
+        match = pattern.search(text)
+        if match:
+            description = match.group(1).strip()
+            # Удаляем все переводы строки
+            description = description.replace('\n', ' ')
+            # Удаляем лишние пробелы
+            description = re.sub(r'\s+', ' ', description).strip()
+            return description
+    return None
+
+def extract_possible_actions(text):
+    action_patterns = [
+        r'(?:\*\*Possible Actions:\*\*|### Possible Actions:|---\s*\*\*Actions:\*\*|\*\*Actions\*\*|\*\*Possible Actions\*\*)([\s\S]*?)(?:\n\n|\Z|What will Sabrina do next\?|---)'
+    ]
+    
+    for pattern_str in action_patterns:
+        pattern = re.compile(pattern_str)
+        match = pattern.search(text)
+        if match:
+            actions_block = match.group(1).strip()
+            actions = re.findall(r'\d+\.\s\*\*(.*?)\*\*', actions_block)
+            if not actions:
+                # В случае если нет форматирования ** **, попробуем другой вариант
+                actions = re.findall(r'\d+\.\s(.*?)(?:\n|$)', actions_block)
+            return actions
+    return None
 
 def query_model(conversation, question):
     # Get OpenAI Response
@@ -82,9 +100,12 @@ def query_model(conversation, question):
             "question": question
         })
     response_text = response['text']
+    print(response_text)
 
     description = extract_and_format_description(response_text)
-    print(description)
+    possible_actions = extract_possible_actions(response_text)
+    print(possible_actions)
+
     client = OpenAI()
     response_image= client.images.generate(
         model="dall-e-3",
@@ -95,10 +116,16 @@ def query_model(conversation, question):
         n=1,
         )
     image_url = response_image.data[0].url
-    return response_text, image_url
+    return response_text, image_url, possible_actions
 
 if __name__ == "__main__":
     conv = define_model()
-    response_text, response_image = query_model(conv, "wakeup")
-    #print(respond["text"])
+    response_text, response_image, possible_actions = query_model(conv, "Head directly towards the Whispering Woods, following the main road out of town.")
+    print(response_text)
     print(response_image)
+    print("Scene description :")
+    print(extract_and_format_description(response_text))
+    print("\nPossible Actions:")
+    for action in possible_actions:
+        print(f"- {action}")
+
