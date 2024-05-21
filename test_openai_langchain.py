@@ -17,7 +17,7 @@ from langchain.chains import LLMChain
 
 
 import os
-os.environ["OPENAI_API_KEY"] = "sk-чччччччччччччччччччччччччччч"
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 # Directory for templates
@@ -57,28 +57,23 @@ def define_model():
 
 
 def extract_and_format_description(text):
-    start_patterns = [
-        r'\*\*Starting Location:.*?\*\*([\s\S]*?)(\*\*Possible Actions:|\Z)',
-        r'\*\*Setting:.*?\*\*([\s\S]*?)(\*\*Possible Actions:|\Z)',
-        r'### Starting Location:.*?\n([\s\S]*?)(### Possible Actions:|\*\*Possible Actions:|\*\*Actions:|---\s*\*\*Actions:\*\*|\*\*Actions)',
-        r'([\s\S]*?)(### Possible Actions:|---\s*\*\*Actions:\*\*|\*\*Actions|\*\*Possible Actions)'
-    ]
-    
-    for pattern_str in start_patterns:
-        pattern = re.compile(pattern_str)
-        match = pattern.search(text)
-        if match:
-            description = match.group(1).strip()
-            # Удаляем все переводы строки
-            description = description.replace('\n', ' ')
-            # Удаляем лишние пробелы
-            description = re.sub(r'\s+', ' ', description).strip()
-            return description
+    # Обновленный шаблон для нового формата
+    pattern = re.compile(r'\*\*Scene Description:\*\*([\s\S]*?)(\*\*Possible actions:\*\*|\Z)')
+    match = pattern.search(text)
+    if match:
+        description = match.group(1).strip()
+        # Удаляем все переводы строки
+        description = description.replace('\n', ' ')
+        # Удаляем лишние пробелы
+        description = re.sub(r'\s+', ' ', description).strip()
+        return description
     return None
 
 def extract_possible_actions(text):
     action_patterns = [
-        r'(?:\*\*Possible Actions:\*\*|### Possible Actions:|---\s*\*\*Actions:\*\*|\*\*Actions\*\*|\*\*Possible Actions\*\*)([\s\S]*?)(?:\n\n|\Z|What will Sabrina do next\?|---)'
+        #r'(?:\*\*Possible Actions:\*\*|### Possible Actions:|---\s*\*\*Actions:\*\*|\*\*Actions\*\*|\*\*Possible Actions\*\*)([\s\S]*?)(?:\n\n|\Z|What will Sabrina do next\?|---)'
+        r'\*\*Possible Actions:\*\*([\s\S]*)'
+
     ]
     
     for pattern_str in action_patterns:
@@ -120,7 +115,7 @@ def query_model(conversation, question):
 
 if __name__ == "__main__":
     conv = define_model()
-    response_text, response_image, possible_actions = query_model(conv, "Head directly towards the Whispering Woods, following the main road out of town.")
+    response_text, response_image, possible_actions = query_model(conv, "Examine the wildflowers and collect a few samples for future study")
     print(response_text)
     print(response_image)
     print("Scene description :")
