@@ -17,7 +17,7 @@ from langchain.chains import LLMChain
 
 
 import os
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "sk-proj-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 
 # Directory for templates
@@ -57,8 +57,8 @@ def define_model():
 
 
 def extract_and_format_description(text):
-    # Обновленный шаблон для нового формата
-    pattern = re.compile(r'\*\*Scene Description:\*\*([\s\S]*?)(\*\*Possible actions:\*\*|\Z)')
+    # Обновленный шаблон для нового формата, учитывающий **Possible Actions:**
+    pattern = re.compile(r'\*\*Scene Description:\*\*([\s\S]*?)(?=\*\*Possible Actions:\*\*|\Z)', re.IGNORECASE)
     match = pattern.search(text)
     if match:
         description = match.group(1).strip()
