@@ -1,0 +1,405 @@
+Collecting autotrain-advanced
+  Using cached autotrain_advanced-0.7.101-py3-none-any.whl.metadata (14 kB)
+Collecting albumentations==1.4.6 (from autotrain-advanced)
+  Using cached albumentations-1.4.6-py3-none-any.whl.metadata (37 kB)
+Collecting codecarbon==2.3.5 (from autotrain-advanced)
+  Using cached codecarbon-2.3.5-py3-none-any.whl.metadata (6.6 kB)
+Collecting datasets~=2.19.0 (from datasets[vision]~=2.19.0->autotrain-advanced)
+  Using cached datasets-2.19.1-py3-none-any.whl.metadata (19 kB)
+Collecting evaluate==0.4.1 (from autotrain-advanced)
+  Using cached evaluate-0.4.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting ipadic==1.0.0 (from autotrain-advanced)
+  Using cached ipadic-1.0.0.tar.gz (13.4 MB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting jiwer==3.0.3 (from autotrain-advanced)
+  Using cached jiwer-3.0.3-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: joblib==1.4.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (1.4.0)
+Collecting loguru==0.7.2 (from autotrain-advanced)
+  Using cached loguru-0.7.2-py3-none-any.whl.metadata (23 kB)
+Requirement already satisfied: pandas==2.2.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (2.2.2)
+Requirement already satisfied: nltk==3.8.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (3.8.1)
+Collecting optuna==3.6.1 (from autotrain-advanced)
+  Using cached optuna-3.6.1-py3-none-any.whl.metadata (17 kB)
+Collecting Pillow==10.3.0 (from autotrain-advanced)
+  Using cached pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting protobuf==4.23.4 (from autotrain-advanced)
+  Using cached protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl.metadata (540 bytes)
+Collecting sacremoses==0.1.1 (from autotrain-advanced)
+  Using cached sacremoses-0.1.1-py3-none-any.whl.metadata (8.3 kB)
+Collecting scikit-learn==1.4.2 (from autotrain-advanced)
+  Using cached scikit_learn-1.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Requirement already satisfied: sentencepiece==0.2.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.2.0)
+Collecting tqdm==4.66.2 (from autotrain-advanced)
+  Using cached tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: werkzeug==3.0.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (3.0.2)
+Collecting xgboost==2.0.3 (from autotrain-advanced)
+  Using cached xgboost-2.0.3-py3-none-manylinux2014_x86_64.whl.metadata (2.0 kB)
+Requirement already satisfied: huggingface-hub==0.22.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.22.2)
+Requirement already satisfied: requests==2.31.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (2.31.0)
+Collecting einops==0.7.0 (from autotrain-advanced)
+  Using cached einops-0.7.0-py3-none-any.whl.metadata (13 kB)
+Collecting invisible-watermark==0.2.0 (from autotrain-advanced)
+  Using cached invisible_watermark-0.2.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting packaging==24.0 (from autotrain-advanced)
+  Using cached packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: cryptography==42.0.5 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (42.0.5)
+Collecting nvitop==1.3.2 (from autotrain-advanced)
+  Using cached nvitop-1.3.2-py3-none-any.whl.metadata (78 kB)
+Requirement already satisfied: tensorboard==2.16.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (2.16.2)
+Requirement already satisfied: peft==0.10.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.10.0)
+Requirement already satisfied: trl==0.8.6 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.8.6)
+Collecting tiktoken==0.6.0 (from autotrain-advanced)
+  Using cached tiktoken-0.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting transformers==4.40.1 (from autotrain-advanced)
+  Using cached transformers-4.40.1-py3-none-any.whl.metadata (137 kB)
+Collecting accelerate==0.29.3 (from autotrain-advanced)
+  Using cached accelerate-0.29.3-py3-none-any.whl.metadata (18 kB)
+Collecting diffusers==0.27.2 (from autotrain-advanced)
+  Using cached diffusers-0.27.2-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: rouge-score==0.1.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.1.2)
+Collecting py7zr==0.21.0 (from autotrain-advanced)
+  Using cached py7zr-0.21.0-py3-none-any.whl.metadata (17 kB)
+Collecting fastapi==0.110.2 (from autotrain-advanced)
+  Using cached fastapi-0.110.2-py3-none-any.whl.metadata (24 kB)
+Requirement already satisfied: uvicorn==0.29.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.29.0)
+Requirement already satisfied: python-multipart==0.0.9 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.0.9)
+Collecting pydantic==2.7.1 (from autotrain-advanced)
+  Using cached pydantic-2.7.1-py3-none-any.whl.metadata (107 kB)
+Collecting hf-transfer (from autotrain-advanced)
+  Using cached hf_transfer-0.1.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting pyngrok==7.1.6 (from autotrain-advanced)
+  Using cached pyngrok-7.1.6-py3-none-any.whl.metadata (7.4 kB)
+Collecting authlib==1.3.0 (from autotrain-advanced)
+  Using cached Authlib-1.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+Collecting itsdangerous==2.2.0 (from autotrain-advanced)
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting seqeval==1.2.2 (from autotrain-advanced)
+  Using cached seqeval-1.2.2.tar.gz (43 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting httpx==0.27.0 (from autotrain-advanced)
+  Using cached httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting pyyaml==6.0.1 (from autotrain-advanced)
+  Using cached PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting timm==0.9.16 (from autotrain-advanced)
+  Using cached timm-0.9.16-py3-none-any.whl.metadata (38 kB)
+Collecting torchmetrics==1.4.0 (from autotrain-advanced)
+  Using cached torchmetrics-1.4.0-py3-none-any.whl.metadata (19 kB)
+Collecting pycocotools==2.0.7 (from autotrain-advanced)
+  Using cached pycocotools-2.0.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Requirement already satisfied: bitsandbytes==0.43.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from autotrain-advanced) (0.43.1)
+Requirement already satisfied: numpy>=1.17 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from accelerate==0.29.3->autotrain-advanced) (1.25.2)
+Requirement already satisfied: psutil in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from accelerate==0.29.3->autotrain-advanced) (5.9.5)
+Requirement already satisfied: torch>=1.10.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from accelerate==0.29.3->autotrain-advanced) (2.2.2)
+Requirement already satisfied: safetensors>=0.3.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from accelerate==0.29.3->autotrain-advanced) (0.3.1)
+Collecting scipy>=1.10.0 (from albumentations==1.4.6->autotrain-advanced)
+  Using cached scipy-1.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Requirement already satisfied: scikit-image>=0.21.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from albumentations==1.4.6->autotrain-advanced) (0.21.0)
+Requirement already satisfied: typing-extensions>=4.9.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from albumentations==1.4.6->autotrain-advanced) (4.11.0)
+Requirement already satisfied: opencv-python-headless>=4.9.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from albumentations==1.4.6->autotrain-advanced) (4.9.0.80)
+Collecting arrow (from codecarbon==2.3.5->autotrain-advanced)
+  Using cached arrow-1.3.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting pynvml (from codecarbon==2.3.5->autotrain-advanced)
+  Using cached pynvml-11.5.0-py3-none-any.whl.metadata (7.8 kB)
+Collecting py-cpuinfo (from codecarbon==2.3.5->autotrain-advanced)
+  Using cached py_cpuinfo-9.0.0-py3-none-any.whl.metadata (794 bytes)
+Requirement already satisfied: rapidfuzz in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from codecarbon==2.3.5->autotrain-advanced) (3.8.1)
+Requirement already satisfied: click in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from codecarbon==2.3.5->autotrain-advanced) (8.1.7)
+Collecting prometheus-client (from codecarbon==2.3.5->autotrain-advanced)
+  Using cached prometheus_client-0.20.0-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: cffi>=1.12 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from cryptography==42.0.5->autotrain-advanced) (1.16.0)
+Requirement already satisfied: importlib-metadata in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from diffusers==0.27.2->autotrain-advanced) (7.0.0)
+Requirement already satisfied: filelock in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from diffusers==0.27.2->autotrain-advanced) (3.13.4)
+Requirement already satisfied: regex!=2019.12.17 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from diffusers==0.27.2->autotrain-advanced) (2023.12.25)
+Requirement already satisfied: dill in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from evaluate==0.4.1->autotrain-advanced) (0.3.8)
+Requirement already satisfied: xxhash in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from evaluate==0.4.1->autotrain-advanced) (3.4.1)
+Requirement already satisfied: multiprocess in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from evaluate==0.4.1->autotrain-advanced) (0.70.16)
+Requirement already satisfied: fsspec>=2021.05.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from fsspec[http]>=2021.05.0->evaluate==0.4.1->autotrain-advanced) (2024.2.0)
+Collecting responses<0.19 (from evaluate==0.4.1->autotrain-advanced)
+  Using cached responses-0.18.0-py3-none-any.whl.metadata (29 kB)
+Collecting starlette<0.38.0,>=0.37.2 (from fastapi==0.110.2->autotrain-advanced)
+  Using cached starlette-0.37.2-py3-none-any.whl.metadata (5.9 kB)
+Requirement already satisfied: anyio in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from httpx==0.27.0->autotrain-advanced) (3.7.1)
+Requirement already satisfied: certifi in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from httpx==0.27.0->autotrain-advanced) (2024.2.2)
+Collecting httpcore==1.* (from httpx==0.27.0->autotrain-advanced)
+  Using cached httpcore-1.0.5-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: idna in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from httpx==0.27.0->autotrain-advanced) (3.6)
+Requirement already satisfied: sniffio in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from httpx==0.27.0->autotrain-advanced) (1.3.1)
+Requirement already satisfied: PyWavelets>=1.1.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from invisible-watermark==0.2.0->autotrain-advanced) (1.6.0)
+Requirement already satisfied: opencv-python>=4.1.0.25 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from invisible-watermark==0.2.0->autotrain-advanced) (4.9.0.80)
+Collecting nvidia-ml-py<12.536.0a0,>=11.450.51 (from nvitop==1.3.2->autotrain-advanced)
+  Using cached nvidia_ml_py-12.535.161-py3-none-any.whl.metadata (8.6 kB)
+Requirement already satisfied: cachetools>=1.0.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from nvitop==1.3.2->autotrain-advanced) (5.3.3)
+Requirement already satisfied: termcolor>=1.0.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from nvitop==1.3.2->autotrain-advanced) (2.4.0)
+Collecting alembic>=1.5.0 (from optuna==3.6.1->autotrain-advanced)
+  Using cached alembic-1.13.1-py3-none-any.whl.metadata (7.4 kB)
+Collecting colorlog (from optuna==3.6.1->autotrain-advanced)
+  Using cached colorlog-6.8.2-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: sqlalchemy>=1.3.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from optuna==3.6.1->autotrain-advanced) (2.0.29)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from pandas==2.2.2->autotrain-advanced) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from pandas==2.2.2->autotrain-advanced) (2024.1)
+Requirement already satisfied: tzdata>=2022.7 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from pandas==2.2.2->autotrain-advanced) (2024.1)
+Collecting texttable (from py7zr==0.21.0->autotrain-advanced)
+  Using cached texttable-1.7.0-py2.py3-none-any.whl.metadata (9.8 kB)
+Collecting pycryptodomex>=3.16.0 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached pycryptodomex-3.20.0-cp35-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+Collecting pyzstd>=0.15.9 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached pyzstd-0.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.4 kB)
+Collecting pyppmd<1.2.0,>=1.1.0 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached pyppmd-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+Collecting pybcj<1.1.0,>=1.0.0 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached pybcj-1.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting multivolumefile>=0.2.3 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached multivolumefile-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+Collecting inflate64<1.1.0,>=1.0.0 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached inflate64-1.0.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting brotli>=1.1.0 (from py7zr==0.21.0->autotrain-advanced)
+  Using cached Brotli-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Requirement already satisfied: matplotlib>=2.1.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from pycocotools==2.0.7->autotrain-advanced) (3.8.4)
+Requirement already satisfied: annotated-types>=0.4.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from pydantic==2.7.1->autotrain-advanced) (0.6.0)
+Collecting pydantic-core==2.18.2 (from pydantic==2.7.1->autotrain-advanced)
+  Using cached pydantic_core-2.18.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from requests==2.31.0->autotrain-advanced) (3.3.2)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from requests==2.31.0->autotrain-advanced) (2.2.1)
+Requirement already satisfied: absl-py in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from rouge-score==0.1.2->autotrain-advanced) (2.1.0)
+Requirement already satisfied: six>=1.14.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from rouge-score==0.1.2->autotrain-advanced) (1.16.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from scikit-learn==1.4.2->autotrain-advanced) (3.4.0)
+Requirement already satisfied: grpcio>=1.48.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tensorboard==2.16.2->autotrain-advanced) (1.62.1)
+Requirement already satisfied: markdown>=2.6.8 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tensorboard==2.16.2->autotrain-advanced) (3.6)
+Requirement already satisfied: setuptools>=41.0.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tensorboard==2.16.2->autotrain-advanced) (68.2.2)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tensorboard==2.16.2->autotrain-advanced) (0.7.2)
+Requirement already satisfied: torchvision in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from timm==0.9.16->autotrain-advanced) (0.17.2)
+Requirement already satisfied: lightning-utilities>=0.8.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torchmetrics==1.4.0->autotrain-advanced) (0.11.2)
+Collecting pretty-errors==1.2.25 (from torchmetrics==1.4.0->autotrain-advanced)
+  Using cached pretty_errors-1.2.25-py3-none-any.whl.metadata (12 kB)
+Collecting tokenizers<0.20,>=0.19 (from transformers==4.40.1->autotrain-advanced)
+  Using cached tokenizers-0.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting safetensors>=0.3.1 (from accelerate==0.29.3->autotrain-advanced)
+  Using cached safetensors-0.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Requirement already satisfied: tyro>=0.5.11 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from trl==0.8.6->autotrain-advanced) (0.8.3)
+Requirement already satisfied: h11>=0.8 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from uvicorn==0.29.0->autotrain-advanced) (0.14.0)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from werkzeug==3.0.2->autotrain-advanced) (2.1.5)
+Requirement already satisfied: colorama in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from pretty-errors==1.2.25->torchmetrics==1.4.0->autotrain-advanced) (0.4.6)
+Requirement already satisfied: pyarrow>=12.0.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (15.0.2)
+Requirement already satisfied: pyarrow-hotfix in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (0.6)
+Requirement already satisfied: aiohttp in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (3.9.3)
+Collecting Mako (from alembic>=1.5.0->optuna==3.6.1->autotrain-advanced)
+  Using cached Mako-1.3.5-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: pycparser in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from cffi>=1.12->cryptography==42.0.5->autotrain-advanced) (2.22)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from aiohttp->datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (1.3.1)
+Requirement already satisfied: attrs>=17.3.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from aiohttp->datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (23.2.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from aiohttp->datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (1.4.1)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from aiohttp->datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (6.0.5)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from aiohttp->datasets~=2.19.0->datasets[vision]~=2.19.0->autotrain-advanced) (1.9.4)
+Requirement already satisfied: contourpy>=1.0.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from matplotlib>=2.1.0->pycocotools==2.0.7->autotrain-advanced) (1.2.1)
+Requirement already satisfied: cycler>=0.10 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from matplotlib>=2.1.0->pycocotools==2.0.7->autotrain-advanced) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from matplotlib>=2.1.0->pycocotools==2.0.7->autotrain-advanced) (4.51.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from matplotlib>=2.1.0->pycocotools==2.0.7->autotrain-advanced) (1.4.5)
+Requirement already satisfied: pyparsing>=2.3.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from matplotlib>=2.1.0->pycocotools==2.0.7->autotrain-advanced) (3.1.2)
+Requirement already satisfied: networkx>=2.8 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from scikit-image>=0.21.0->albumentations==1.4.6->autotrain-advanced) (3.3)
+Requirement already satisfied: imageio>=2.27 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from scikit-image>=0.21.0->albumentations==1.4.6->autotrain-advanced) (2.34.0)
+Requirement already satisfied: tifffile>=2022.8.12 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from scikit-image>=0.21.0->albumentations==1.4.6->autotrain-advanced) (2024.2.12)
+Requirement already satisfied: lazy_loader>=0.2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from scikit-image>=0.21.0->albumentations==1.4.6->autotrain-advanced) (0.4)
+Requirement already satisfied: greenlet!=0.4.17 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from sqlalchemy>=1.3.0->optuna==3.6.1->autotrain-advanced) (3.0.3)
+Requirement already satisfied: sympy in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (1.12)
+Requirement already satisfied: jinja2 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (8.9.2.26)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.19.3 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (2.19.3)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.1.105)
+Requirement already satisfied: triton==2.2.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (2.2.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (12.4.127)
+Requirement already satisfied: docstring-parser>=0.14.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tyro>=0.5.11->trl==0.8.6->autotrain-advanced) (0.16)
+Requirement already satisfied: rich>=11.1.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tyro>=0.5.11->trl==0.8.6->autotrain-advanced) (13.7.1)
+Requirement already satisfied: shtab>=1.5.6 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from tyro>=0.5.11->trl==0.8.6->autotrain-advanced) (1.7.1)
+Collecting types-python-dateutil>=2.8.10 (from arrow->codecarbon==2.3.5->autotrain-advanced)
+  Using cached types_python_dateutil-2.9.0.20240316-py3-none-any.whl.metadata (1.8 kB)
+Requirement already satisfied: zipp>=0.5 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from importlib-metadata->diffusers==0.27.2->autotrain-advanced) (3.18.1)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from rich>=11.1.0->tyro>=0.5.11->trl==0.8.6->autotrain-advanced) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from rich>=11.1.0->tyro>=0.5.11->trl==0.8.6->autotrain-advanced) (2.17.2)
+Requirement already satisfied: mpmath>=0.19 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from sympy->torch>=1.10.0->accelerate==0.29.3->autotrain-advanced) (1.3.0)
+Requirement already satisfied: mdurl~=0.1 in /home/quit/miniconda3/envs/textgen/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=11.1.0->tyro>=0.5.11->trl==0.8.6->autotrain-advanced) (0.1.2)
+Using cached autotrain_advanced-0.7.101-py3-none-any.whl (297 kB)
+Using cached accelerate-0.29.3-py3-none-any.whl (297 kB)
+Using cached albumentations-1.4.6-py3-none-any.whl (153 kB)
+Using cached Authlib-1.3.0-py2.py3-none-any.whl (223 kB)
+Using cached codecarbon-2.3.5-py3-none-any.whl (174 kB)
+Using cached diffusers-0.27.2-py3-none-any.whl (2.0 MB)
+Using cached einops-0.7.0-py3-none-any.whl (44 kB)
+Using cached evaluate-0.4.1-py3-none-any.whl (84 kB)
+Using cached fastapi-0.110.2-py3-none-any.whl (91 kB)
+Using cached httpx-0.27.0-py3-none-any.whl (75 kB)
+Using cached invisible_watermark-0.2.0-py3-none-any.whl (1.6 MB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached jiwer-3.0.3-py3-none-any.whl (21 kB)
+Using cached loguru-0.7.2-py3-none-any.whl (62 kB)
+Using cached nvitop-1.3.2-py3-none-any.whl (215 kB)
+Using cached optuna-3.6.1-py3-none-any.whl (380 kB)
+Using cached packaging-24.0-py3-none-any.whl (53 kB)
+Using cached pillow-10.3.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.5 MB)
+Using cached protobuf-4.23.4-cp37-abi3-manylinux2014_x86_64.whl (304 kB)
+Using cached py7zr-0.21.0-py3-none-any.whl (67 kB)
+Using cached pycocotools-2.0.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (463 kB)
+Using cached pydantic-2.7.1-py3-none-any.whl (409 kB)
+Using cached pyngrok-7.1.6-py3-none-any.whl (22 kB)
+Using cached PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
+Using cached sacremoses-0.1.1-py3-none-any.whl (897 kB)
+Using cached scikit_learn-1.4.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.1 MB)
+Using cached tiktoken-0.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.8 MB)
+Using cached timm-0.9.16-py3-none-any.whl (2.2 MB)
+Using cached torchmetrics-1.4.0-py3-none-any.whl (868 kB)
+Using cached tqdm-4.66.2-py3-none-any.whl (78 kB)
+Using cached transformers-4.40.1-py3-none-any.whl (9.0 MB)
+Downloading xgboost-2.0.3-py3-none-manylinux2014_x86_64.whl (297.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 297.1/297.1 MB 1.6 MB/s eta 0:00:00
+Using cached httpcore-1.0.5-py3-none-any.whl (77 kB)
+Downloading pretty_errors-1.2.25-py3-none-any.whl (17 kB)
+Downloading pydantic_core-2.18.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 1.8 MB/s eta 0:00:00
+Downloading datasets-2.19.1-py3-none-any.whl (542 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 542.0/542.0 kB 2.0 MB/s eta 0:00:00
+Downloading hf_transfer-0.1.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 2.4 MB/s eta 0:00:00
+Downloading alembic-1.13.1-py3-none-any.whl (233 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 233.4/233.4 kB 2.6 MB/s eta 0:00:00
+Downloading Brotli-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 2.8 MB/s eta 0:00:00
+Downloading inflate64-1.0.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (96 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.0/96.0 kB 2.8 MB/s eta 0:00:00
+Downloading multivolumefile-0.2.3-py3-none-any.whl (17 kB)
+Downloading nvidia_ml_py-12.535.161-py3-none-any.whl (37 kB)
+Downloading pybcj-1.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (50 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 2.5 MB/s eta 0:00:00
+Downloading pycryptodomex-3.20.0-cp35-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 2.7 MB/s eta 0:00:00
+Downloading pyppmd-1.1.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (141 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.2/141.2 kB 2.2 MB/s eta 0:00:00
+Downloading pyzstd-0.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (413 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 413.8/413.8 kB 2.4 MB/s eta 0:00:00
+Downloading responses-0.18.0-py3-none-any.whl (38 kB)
+Using cached safetensors-0.4.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+Using cached scipy-1.13.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.6 MB)
+Using cached starlette-0.37.2-py3-none-any.whl (71 kB)
+Using cached tokenizers-0.19.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+Using cached arrow-1.3.0-py3-none-any.whl (66 kB)
+Downloading colorlog-6.8.2-py3-none-any.whl (11 kB)
+Using cached prometheus_client-0.20.0-py3-none-any.whl (54 kB)
+Using cached py_cpuinfo-9.0.0-py3-none-any.whl (22 kB)
+Downloading pynvml-11.5.0-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.1/53.1 kB 2.4 MB/s eta 0:00:00
+Downloading texttable-1.7.0-py2.py3-none-any.whl (10 kB)
+Using cached types_python_dateutil-2.9.0.20240316-py3-none-any.whl (9.7 kB)
+Downloading Mako-1.3.5-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.6/78.6 kB 2.5 MB/s eta 0:00:00
+Building wheels for collected packages: ipadic, seqeval
+  Building wheel for ipadic (setup.py): started
+  Building wheel for ipadic (setup.py): finished with status 'done'
+  Created wheel for ipadic: filename=ipadic-1.0.0-py3-none-any.whl size=13556704 sha256=f72f948b9f9fe625730fbd0a7f337725b6b4350b8cc4224b8697563755b47a55
+  Stored in directory: /home/quit/.cache/pip/wheels/44/56/37/f543963822b85260c9f948df8fac8c20169c80dc71b24dc407
+  Building wheel for seqeval (setup.py): started
+  Building wheel for seqeval (setup.py): finished with status 'done'
+  Created wheel for seqeval: filename=seqeval-1.2.2-py3-none-any.whl size=16161 sha256=392e064edaeaa35fead79b561add2943166421fa6fda50538f6982ce84faf01e
+  Stored in directory: /home/quit/.cache/pip/wheels/bc/92/f0/243288f899c2eacdfa8c5f9aede4c71a9bad0ee26a01dc5ead
+Successfully built ipadic seqeval
+Installing collected packages: texttable, py-cpuinfo, nvidia-ml-py, ipadic, brotli, types-python-dateutil, tqdm, scipy, safetensors, pyzstd, pyyaml, pyppmd, pynvml, pydantic-core, pycryptodomex, pybcj, protobuf, prometheus-client, pretty-errors, Pillow, packaging, nvitop, multivolumefile, Mako, loguru, jiwer, itsdangerous, inflate64, httpcore, hf-transfer, einops, colorlog, xgboost, tiktoken, starlette, scikit-learn, sacremoses, responses, pyngrok, pydantic, py7zr, httpx, arrow, alembic, tokenizers, seqeval, pycocotools, optuna, fastapi, diffusers, codecarbon, authlib, transformers, torchmetrics, invisible-watermark, datasets, albumentations, accelerate, timm, evaluate, autotrain-advanced
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.64.1
+    Uninstalling tqdm-4.64.1:
+      Successfully uninstalled tqdm-4.64.1
+  Attempting uninstall: scipy
+    Found existing installation: scipy 1.9.3
+    Uninstalling scipy-1.9.3:
+      Successfully uninstalled scipy-1.9.3
+  Attempting uninstall: safetensors
+    Found existing installation: safetensors 0.3.1
+    Uninstalling safetensors-0.3.1:
+      Successfully uninstalled safetensors-0.3.1
+  Attempting uninstall: pyyaml
+    Found existing installation: PyYAML 6.0
+    Uninstalling PyYAML-6.0:
+      Successfully uninstalled PyYAML-6.0
+  Attempting uninstall: pydantic-core
+    Found existing installation: pydantic_core 2.16.3
+    Uninstalling pydantic_core-2.16.3:
+      Successfully uninstalled pydantic_core-2.16.3
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 3.20.3
+    Uninstalling protobuf-3.20.3:
+      Successfully uninstalled protobuf-3.20.3
+  Attempting uninstall: Pillow
+    Found existing installation: Pillow 9.2.0
+    Uninstalling Pillow-9.2.0:
+      Successfully uninstalled Pillow-9.2.0
+  Attempting uninstall: packaging
+    Found existing installation: packaging 23.2
+    Uninstalling packaging-23.2:
+      Successfully uninstalled packaging-23.2
+  Attempting uninstall: itsdangerous
+    Found existing installation: itsdangerous 2.1.2
+    Uninstalling itsdangerous-2.1.2:
+      Successfully uninstalled itsdangerous-2.1.2
+  Attempting uninstall: httpcore
+    Found existing installation: httpcore 0.17.3
+    Uninstalling httpcore-0.17.3:
+      Successfully uninstalled httpcore-0.17.3
+  Attempting uninstall: einops
+    Found existing installation: einops 0.4.1
+    Uninstalling einops-0.4.1:
+      Successfully uninstalled einops-0.4.1
+  Attempting uninstall: tiktoken
+    Found existing installation: tiktoken 0.7.0
+    Uninstalling tiktoken-0.7.0:
+      Successfully uninstalled tiktoken-0.7.0
+  Attempting uninstall: starlette
+    Found existing installation: starlette 0.26.1
+    Uninstalling starlette-0.26.1:
+      Successfully uninstalled starlette-0.26.1
+  Attempting uninstall: scikit-learn
+    Found existing installation: scikit-learn 1.4.1.post1
+    Uninstalling scikit-learn-1.4.1.post1:
+      Successfully uninstalled scikit-learn-1.4.1.post1
+  Attempting uninstall: pydantic
+    Found existing installation: pydantic 1.10.15
+    Uninstalling pydantic-1.10.15:
+      Successfully uninstalled pydantic-1.10.15
+  Attempting uninstall: httpx
+    Found existing installation: httpx 0.24.1
+    Uninstalling httpx-0.24.1:
+      Successfully uninstalled httpx-0.24.1
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.13.3
+    Uninstalling tokenizers-0.13.3:
+      Successfully uninstalled tokenizers-0.13.3
+  Attempting uninstall: fastapi
+    Found existing installation: fastapi 0.94.0
+    Uninstalling fastapi-0.94.0:
+      Successfully uninstalled fastapi-0.94.0
+  Attempting uninstall: transformers
+    Found existing installation: transformers 4.30.2
+    Uninstalling transformers-4.30.2:
+      Successfully uninstalled transformers-4.30.2
+  Attempting uninstall: torchmetrics
+    Found existing installation: torchmetrics 1.3.2
+    Uninstalling torchmetrics-1.3.2:
+      Successfully uninstalled torchmetrics-1.3.2
+  Attempting uninstall: datasets
+    Found existing installation: datasets 2.18.0
+    Uninstalling datasets-2.18.0:
+      Successfully uninstalled datasets-2.18.0
+  Attempting uninstall: accelerate
+    Found existing installation: accelerate 0.21.0
+    Uninstalling accelerate-0.21.0:
+      Successfully uninstalled accelerate-0.21.0
+  Attempting uninstall: timm
+    Found existing installation: timm 0.9.2
+    Uninstalling timm-0.9.2:
+      Successfully uninstalled timm-0.9.2
+Successfully installed Mako-1.3.5 Pillow-10.3.0 accelerate-0.29.3 albumentations-1.4.6 alembic-1.13.1 arrow-1.3.0 authlib-1.3.0 autotrain-advanced-0.7.101 brotli-1.1.0 codecarbon-2.3.5 colorlog-6.8.2 datasets-2.19.1 diffusers-0.27.2 einops-0.7.0 evaluate-0.4.1 fastapi-0.110.2 hf-transfer-0.1.6 httpcore-1.0.5 httpx-0.27.0 inflate64-1.0.0 invisible-watermark-0.2.0 ipadic-1.0.0 itsdangerous-2.2.0 jiwer-3.0.3 loguru-0.7.2 multivolumefile-0.2.3 nvidia-ml-py-12.535.161 nvitop-1.3.2 optuna-3.6.1 packaging-24.0 pretty-errors-1.2.25 prometheus-client-0.20.0 protobuf-4.23.4 py-cpuinfo-9.0.0 py7zr-0.21.0 pybcj-1.0.2 pycocotools-2.0.7 pycryptodomex-3.20.0 pydantic-2.7.1 pydantic-core-2.18.2 pyngrok-7.1.6 pynvml-11.5.0 pyppmd-1.1.0 pyyaml-6.0.1 pyzstd-0.16.0 responses-0.18.0 sacremoses-0.1.1 safetensors-0.4.3 scikit-learn-1.4.2 scipy-1.13.0 seqeval-1.2.2 starlette-0.37.2 texttable-1.7.0 tiktoken-0.6.0 timm-0.9.16 tokenizers-0.19.1 torchmetrics-1.4.0 tqdm-4.66.2 transformers-4.40.1 types-python-dateutil-2.9.0.20240316 xgboost-2.0.3
