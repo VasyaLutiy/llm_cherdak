@@ -1,0 +1,469 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load BASE Checkpoint"
+    }
+  },
+  "3": {
+    "inputs": {
+      "ckpt_name": "sd_xl_refiner_1.0_0.9vae.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load REFINER Checkpoint"
+    }
+  },
+  "18": {
+    "inputs": {
+      "noise_seed": [
+        "129",
+        0
+      ],
+      "steps": [
+        "98",
+        0
+      ],
+      "cfg": [
+        "99",
+        0
+      ],
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "base_ratio": [
+        "100",
+        0
+      ],
+      "denoise": [
+        "101",
+        0
+      ],
+      "base_model": [
+        "1",
+        0
+      ],
+      "base_positive": [
+        "63",
+        0
+      ],
+      "base_negative": [
+        "63",
+        1
+      ],
+      "refiner_model": [
+        "3",
+        0
+      ],
+      "refiner_positive": [
+        "63",
+        2
+      ],
+      "refiner_negative": [
+        "63",
+        3
+      ],
+      "latent_image": [
+        "47",
+        0
+      ]
+    },
+    "class_type": "SeargeSDXLSampler",
+    "_meta": {
+      "title": "SDXL Sampler v1 (Searge)"
+    }
+  },
+  "19": {
+    "inputs": {
+      "prompt": "Running girl robot,cybernetic parts on face, her punk mohawk hairstyle fits the scene perfectly, slim long legs narrow hips large calves, massive army boots, glowing tattoos, hologram, freckles, blush,  glowing neon lights, raining, glowing eyes, masterpiece, digital art style, painting style, cyberpunk art"
+    },
+    "class_type": "SeargePromptText",
+    "_meta": {
+      "title": "Main Prompt"
+    }
+  },
+  "21": {
+    "inputs": {
+      "prompt": "black bulletproof vest female armor, full armor, insulated armor, lots of fine detail, the girl's body is reflected in the puddle, she holds a bottle of \"Jack Daniels\" whiskey"
+    },
+    "class_type": "SeargePromptText",
+    "_meta": {
+      "title": "Secondary Prompt"
+    }
+  },
+  "22": {
+    "inputs": {
+      "prompt": "photo, bad angle, bad composition, low detailed, deformed iris, deformed pupils, jpeg artifacts, ugly, duplicate, morbid, mutilated, too many fingers , mutated hands, poorly drawn hands, mutation, deformed, bad anatomy, bad proportions, extra limbs, cloned face, malformed limbs, extra arms, extra legs, fused fingers, text, signature, watermark, logo, autograph, trademark, cut off, censored, inaccurate body, inaccurate face, bad teeth, deformities, (boring, uninteresting:1.1)"
+    },
+    "class_type": "SeargePromptText",
+    "_meta": {
+      "title": "Negative Prompt"
+    }
+  },
+  "43": {
+    "inputs": {
+      "samples": [
+        "18",
+        0
+      ],
+      "vae": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "44": {
+    "inputs": {
+      "images": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "47": {
+    "inputs": {
+      "width": [
+        "125",
+        0
+      ],
+      "height": [
+        "125",
+        1
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "48": {
+    "inputs": {
+      "pixels": [
+        "50",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "50": {
+    "inputs": {
+      "image": "example.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "54": {
+    "inputs": {
+      "filename_prefix": "SeargeSDXL/lores",
+      "images": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "63": {
+    "inputs": {
+      "pos_g": [
+        "19",
+        0
+      ],
+      "pos_l": [
+        "21",
+        0
+      ],
+      "pos_r": [
+        "81",
+        0
+      ],
+      "neg_g": "NEG_G",
+      "neg_l": [
+        "90",
+        0
+      ],
+      "neg_r": "NEG_R",
+      "base_width": [
+        "86",
+        0
+      ],
+      "base_height": [
+        "86",
+        0
+      ],
+      "crop_w": 0,
+      "crop_h": 0,
+      "target_width": [
+        "86",
+        0
+      ],
+      "target_height": [
+        "86",
+        0
+      ],
+      "pos_ascore": 6,
+      "neg_ascore": 2.5,
+      "refiner_width": 2048,
+      "refiner_height": 2048,
+      "base_clip": [
+        "1",
+        1
+      ],
+      "refiner_clip": [
+        "3",
+        1
+      ]
+    },
+    "class_type": "SeargeSDXLPromptEncoder",
+    "_meta": {
+      "title": "SDXL Prompt Encoder (Searge)"
+    }
+  },
+  "65": {
+    "inputs": {
+      "upscale_model": [
+        "67",
+        0
+      ],
+      "image": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "66": {
+    "inputs": {
+      "upscale_method": "bicubic",
+      "width": [
+        "141",
+        0
+      ],
+      "height": [
+        "140",
+        0
+      ],
+      "crop": "center",
+      "image": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "67": {
+    "inputs": {
+      "model_name": "4x_NMKD-Siax_200k.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "68": {
+    "inputs": {
+      "model_name": "4x-UltraSharp.pth"
+    },
+    "class_type": "UpscaleModelLoader",
+    "_meta": {
+      "title": "Load Upscale Model"
+    }
+  },
+  "69": {
+    "inputs": {
+      "upscale_model": [
+        "68",
+        0
+      ],
+      "image": [
+        "43",
+        0
+      ]
+    },
+    "class_type": "ImageUpscaleWithModel",
+    "_meta": {
+      "title": "Upscale Image (using Model)"
+    }
+  },
+  "70": {
+    "inputs": {
+      "blend_factor": 0.75,
+      "blend_mode": "normal",
+      "image1": [
+        "65",
+        0
+      ],
+      "image2": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "ImageBlend"
+    }
+  },
+  "71": {
+    "inputs": {
+      "filename_prefix": "SeargeSDXL/hires",
+      "images": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "81": {
+    "inputs": {
+      "prompt1": [
+        "19",
+        0
+      ],
+      "separator": ", ",
+      "prompt2": [
+        "21",
+        0
+      ]
+    },
+    "class_type": "SeargePromptCombiner",
+    "_meta": {
+      "title": "Combined Prompt"
+    }
+  },
+  "86": {
+    "inputs": {
+      "value1": 4096,
+      "value2": 2048
+    },
+    "class_type": "SeargeIntegerPair",
+    "_meta": {
+      "title": "Base and Refiner Conditional Sizes"
+    }
+  },
+  "90": {
+    "inputs": {
+      "prompt": ""
+    },
+    "class_type": "SeargePromptText",
+    "_meta": {
+      "title": "Secondary Negative Prompt"
+    }
+  },
+  "98": {
+    "inputs": {
+      "value": 25
+    },
+    "class_type": "SeargeIntegerConstant",
+    "_meta": {
+      "title": "Steps"
+    }
+  },
+  "99": {
+    "inputs": {
+      "value": 5
+    },
+    "class_type": "SeargeFloatConstant",
+    "_meta": {
+      "title": "CFG Scale"
+    }
+  },
+  "100": {
+    "inputs": {
+      "value": 0.8
+    },
+    "class_type": "SeargeFloatConstant",
+    "_meta": {
+      "title": "Base vs Refiner Ratio"
+    }
+  },
+  "101": {
+    "inputs": {
+      "value": 1.01
+    },
+    "class_type": "SeargeFloatConstant",
+    "_meta": {
+      "title": "Denoise"
+    }
+  },
+  "125": {
+    "inputs": {
+      "value1": 1024,
+      "value2": 1024
+    },
+    "class_type": "SeargeIntegerPair",
+    "_meta": {
+      "title": "Image Resolution"
+    }
+  },
+  "129": {
+    "inputs": {
+      "value": 544876323228539
+    },
+    "class_type": "SeargeIntegerConstant",
+    "_meta": {
+      "title": "Seed Pass-through"
+    }
+  },
+  "140": {
+    "inputs": {
+      "op": "a * b",
+      "a": [
+        "125",
+        1
+      ],
+      "b": 2,
+      "c": 0
+    },
+    "class_type": "SeargeIntegerMath",
+    "_meta": {
+      "title": "Integer Math"
+    }
+  },
+  "141": {
+    "inputs": {
+      "op": "a * b",
+      "a": [
+        "125",
+        0
+      ],
+      "b": 2,
+      "c": 0
+    },
+    "class_type": "SeargeIntegerMath",
+    "_meta": {
+      "title": "Integer Math"
+    }
+  }
+}
